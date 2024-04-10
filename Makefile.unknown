@@ -1,0 +1,11 @@
+ares:main.o function.o
+	gcc -o ares main.o function.o
+
+main.o:main.c function.h
+	gcc -c main.c
+
+function.o:function.c function.h
+	gcc -c function.c
+
+clean:
+	rm ares *.o
